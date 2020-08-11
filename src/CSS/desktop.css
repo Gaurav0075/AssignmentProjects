@@ -1,0 +1,110 @@
+/* main container css  */
+.container--layout{
+    display: grid;
+    grid-template-columns: 20% auto ;
+    grid-column-gap: 30px;
+}
+aside{
+    text-align: center;
+    background-color: #fff;
+
+}
+aside p{
+    padding: 10px;
+    margin-top: 25px;
+    border-bottom: 1px solid #cdcdcd;
+}
+.yearSidebar{
+    grid-template-columns: auto auto;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+}
+.yearSidebar--box button{
+    position: relative;
+}
+.yearSidebar--box button{
+    padding: 4px 28px;
+    border: none;
+    background-color: #88c98b;
+    text-align: center;
+    border-radius: 8px;
+}
+.yearSidebar--box button:hover{
+    background-color: #48bb4d;
+}
+.grid_box--wrapper{
+    grid-template-columns: auto auto auto auto;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+.grid_box{
+    padding: 10px;
+    position: relative;
+    background-color: #ffffff;
+}
+.grid_box img{
+    background-color: #cdcdcd;
+    width: 100%;
+}
+.grid_box ul{
+    padding: 0px;
+}
+.grid_box ul li{
+    margin-left: 30px;
+}
+
+/* -------------START OF media query for tablet devices min width 700px & max width 1024px---------------- */
+
+@media only screen and (max-width: 1024px) and (min-width: 701px) {
+    .container--layout{
+        grid-template-columns: 33% auto ;
+    }
+    .yearSidebar--box button{
+        padding: 6px 25px;
+    }
+    .grid_box--wrapper{
+        width: auto;
+        grid-template-columns: auto auto;
+        text-align: center;
+    }
+    .grid_box{
+        text-align: left;
+        padding: 15px;
+    }
+    .grid_box img{
+        width: 100%;
+    }
+}
+
+/* -------------END OF media query for tablet devices min width 700px & max width 1024px---------------- */
+
+/* -------------START OF media query for mobile devices max width 700px---------------- */
+
+@media only screen and (max-width: 700px) {
+    .container--layout{
+        grid-template-columns: auto ;
+    }
+    aside{
+        margin: 15px;
+    }
+    .yearSidebar--box button{
+        padding: 6px 40px;
+    }
+    .grid_box--wrapper{
+        width: auto;
+        grid-template-columns: auto;
+        text-align: center;
+        margin: 15px;
+    }
+    .grid_box{
+        text-align: left;
+    }
+    .grid_box img{
+        width: -webkit-fill-available;
+        margin: 30px;
+    }
+}
+
+/* -------------END OF media query for mobile devices max width 700px---------------- */
